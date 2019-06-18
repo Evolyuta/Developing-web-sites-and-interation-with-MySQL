@@ -5,8 +5,8 @@ header("Refresh: 3; url=http://www.specialist.ru");
 
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>Перезапрос страницы</title>
+    <meta charset="utf-8"/>
+    <title>Перезапрос страницы</title>
 </head>
 
 <body>

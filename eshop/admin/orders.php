@@ -1,13 +1,13 @@
 <?php
-	require "secure/session.inc.php";
-	require "../inc/lib.inc.php";
-	require "../inc/config.inc.php";
+require "secure/session.inc.php";
+require "../inc/lib.inc.php";
+require "../inc/config.inc.php";
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Поступившие заказы</title>
-	<meta charset="utf-8">
+    <title>Поступившие заказы</title>
+    <meta charset="utf-8">
 </head>
 <body>
 <h1>Поступившие заказы:</h1>
@@ -24,14 +24,14 @@
 
 <h3>Купленные товары:</h3>
 <table border="1" cellpadding="5" cellspacing="0" width="90%">
-<tr>
-	<th>N п/п</th>
-	<th>Название</th>
-	<th>Автор</th>
-	<th>Год издания</th>
-	<th>Цена, руб.</th>
-	<th>Количество</th>
-</tr>
+    <tr>
+        <th>N п/п</th>
+        <th>Название</th>
+        <th>Автор</th>
+        <th>Год издания</th>
+        <th>Цена, руб.</th>
+        <th>Количество</th>
+    </tr>
 
 
 </table>

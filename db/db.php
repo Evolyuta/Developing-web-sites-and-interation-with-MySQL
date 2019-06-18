@@ -1,5 +1,5 @@
 ﻿<?
-$link = mysqli_connect('localhost','root','','web');
+$link = mysqli_connect('localhost', 'root', '', 'web');
 
 $sql = "SELECT name FROM teachers";
 //echo $sql;
@@ -18,3 +18,4 @@ print_r($row);
 
 mysqli_close($link);
 ?>
+

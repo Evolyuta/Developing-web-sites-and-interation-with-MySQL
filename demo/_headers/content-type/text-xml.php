@@ -3,7 +3,7 @@ header("Content-type: text/xml");
 ?>
 <html>
 <head>
-	<title>My page</title>
+    <title>My page</title>
 </head>
 
 <body>

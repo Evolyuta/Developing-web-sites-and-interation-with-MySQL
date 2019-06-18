@@ -1,2 +1,2 @@
 ﻿<?php
-	setcookie("test", "hello");
+setcookie("test", "hello");

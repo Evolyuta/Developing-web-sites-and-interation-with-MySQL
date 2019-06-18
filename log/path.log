@@ -271,3 +271,11 @@
 1560828720 | index | 
 1560828727 | info | mysite.local
 1560828729 | gbook | index.php?id=info
+1560833667 | index | 
+1560833669 | gbook | mysite.local
+1560833674 | log | index.php?id=gbook
+1560833680 | info | index.php?id=log
+1560833683 | about | index.php?id=info
+1560833684 | contact | index.php?id=about
+1560833685 | index | index.php?id=contact
+1560833696 | index | index.php

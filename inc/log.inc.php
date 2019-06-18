@@ -8,5 +8,5 @@ $ref = pathinfo($ref, PATHINFO_BASENAME);
 
 $path = "$dt | $page | $ref\n";
 
-file_put_contents("log/".PATH_LOG, $path, FILE_APPEND);
+file_put_contents("log/" . PATH_LOG, $path, FILE_APPEND);
 
