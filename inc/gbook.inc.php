@@ -48,18 +48,18 @@ if (isset($_GET['del'])) {
 
 /* Удаление записи из БД */
 ?>
-    <h3>Оставьте запись в нашей Гостевой книге</h3>
+<h3>Оставьте запись в нашей Гостевой книге</h3>
 
-    <form method="post" action="<?= $_SERVER['REQUEST_URI'] ?>">
-        Имя: <br/><input type="text" name="name"/><br/>
-        Email: <br/><input type="text" name="email"/><br/>
-        Сообщение: <br/><textarea name="msg"></textarea><br/>
+<form method="post" action="<?= $_SERVER['REQUEST_URI'] ?>">
+    Имя: <br/><input type="text" name="name"/><br/>
+    Email: <br/><input type="text" name="email"/><br/>
+    Сообщение: <br/><textarea name="msg"></textarea><br/>
 
-        <br/>
+    <br/>
 
-        <input type="submit" name="send" value="Отправить!"/>
+    <input type="submit" name="send" value="Отправить!"/>
 
-    </form>
+</form>
 
 <?php
 /* Вывод записей из БД */
