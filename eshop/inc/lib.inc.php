@@ -54,13 +54,18 @@ function basketInit()
     }
 }
 
+function removeBasket()
+{
+    setcookie('basket', 'deleted', time() - 3600);
+}
+
 function addToBasket($id)
 {
     global $basket;
-//    if (!isset($basket[$id]))
-    $basket[$id] = 1;
-//    else
-//        $basket[$id] += 1;
+    if (!isset($basket[$id]))
+        $basket[$id] = 1;
+    else
+        $basket[$id] += 1;
     saveBasket();
 }
 
@@ -99,3 +104,33 @@ function deleteItemFromBasket($id)
     unset($basket[$id]);
     saveBasket();
 }
+
+function saveOrder($datetime)
+{
+    global $basket, $link;
+    $goods = myBasket();
+    $stmt = mysqli_stmt_init($link);
+    $sql = 'INSERT INTO orders(
+title,
+author,
+pubyear,
+price,
+quantity,
+orderid,
+datetime)
+VALUES (?,?,?,?,?,?,?)';
+    if (!mysqli_stmt_prepare($stmt, $sql)) return false;
+    foreach ($goods as $item) {
+        mysqli_stmt_bind_param($stmt, "ssiiisi",
+            $item['title'], $item['author'],
+            $item['pubyear'], $item['price'],
+            $item['quantity'],
+            $basket['orderid'],
+            $datetime);
+        mysqli_stmt_execute($stmt);
+    }
+    mysqli_stmt_close($stmt);
+    removeBasket();
+    return true;
+}
+
