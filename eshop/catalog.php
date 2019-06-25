@@ -2,6 +2,15 @@
 // подключение библиотек
 require "inc/lib.inc.php";
 require "inc/config.inc.php";
+$goods = selectAllItems();
+if ($goods === false) {
+    echo "Error!";
+    exit;
+}
+if (!count($goods)) {
+    echo "Empty!";
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +30,18 @@ require "inc/config.inc.php";
     </tr>
     <?php
 
+    foreach ($goods as $item) {
+        ?>
+        <tr>
+            <td><?= $item['title'] ?></td>
+            <td><?= $item['author'] ?></td>
+            <td><?= $item['pubyear'] ?></td>
+            <td><?= $item['price'] ?></td>
+            <td><a href="add2basket.php?id=<?=
+                $item['id'] ?>">В корзину</td>
+        </tr>
+        <?
+    }
     ?>
 </table>
 </body>
