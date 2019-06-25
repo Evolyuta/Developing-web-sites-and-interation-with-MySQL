@@ -92,3 +92,10 @@ function resultToArray($data)
     }
     return $arr;
 }
+
+function deleteItemFromBasket($id)
+{
+    global $basket;
+    unset($basket[$id]);
+    saveBasket();
+}
