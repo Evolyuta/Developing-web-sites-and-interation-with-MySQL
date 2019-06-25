@@ -19,3 +19,8 @@ function clearStr($data)
     $data = trim(strip_tags($data));
     return mysqli_real_escape_string($link, $data);
 }
+
+function clearInt($data)
+{
+    return abs((int)($data));
+}
